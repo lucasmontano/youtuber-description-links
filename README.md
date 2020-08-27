@@ -15,6 +15,8 @@ Previous Editions's Programming Languages
 - [Python (Second Edition)](https://github.com/lucasmontano/magic-link)
 - [Flutter / Dart Third Edition](https://github.com/lucasmontano/learn-tech)
 
+of course, Kotlin and JAVA are not in the list...
+
 ## How to contribute
 First things first: wait until the 12 hours of streaming has ended.
 https://www.twitch.tv/lucas_montano
