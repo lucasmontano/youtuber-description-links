@@ -2,9 +2,6 @@
 A tool to help Youtubers to manage theirs video links.
 
 ## Important Notes
-- Write your code, Issues and Pull Requests in English
-- Avoid big Pull Requests and split your work properly
-
 This project started on the 4th edition of #umaStackQueNaodomino. We still have to decide which stack we're going to use, if you want to vote in a stack please join our Discord Server: http://bitly.com/montano-server
 
 The Programming Language we're going to be voting are those exemplified in the [Youtube Data API](https://developers.google.com/youtube/v3/code_samples/apps-script) documentation:
@@ -28,3 +25,7 @@ https://www.twitch.tv/lucas_montano
 - Create a Pull Request and link to the Issues
 - Wait for an approval
 - Merge your Pull Request and close the Issues
+
+### Important Notes
+- Write your code, Issues and Pull Requests in English
+- Avoid big Pull Requests and split your work properly
