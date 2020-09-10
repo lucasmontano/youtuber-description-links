@@ -31,3 +31,7 @@ https://www.twitch.tv/lucas_montano
 ### Important Notes
 - Write your code, Issues and Pull Requests in English
 - Avoid big Pull Requests and split your work properly
+
+### Project Setup
+Youtube API Developer Key: [Check Getting Started](https://developers.google.com/youtube/v3/getting-started)
+- `export YOUTUBE_DEVELOPER_KEY=YOUR_KEY`
