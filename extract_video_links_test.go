@@ -1,34 +1,35 @@
 package main
 
-import "testing"
+import (
+	"testing"
+
+	"./models"
+)
 
 func TestExtractVideoLinksQt(t *testing.T) {
 
-	tables := []struct {
-		description     string
-		expectedQtLinks int
-	}{
+	tables := []models.Video{
 		{
-			"Meu nome eh Lucas Montano do canal https://youtube.com/LucasMontano",
-			1,
+			Description:     "Meu nome eh Lucas Montano do canal https://youtube.com/LucasMontano",
+			ExpectedQtLinks: 1,
 		},
 		{
-			"Meu nome eh Lucas Montano do canal https://youtube.com/LucasMontano e https://twitch.com/Lucas_Montano",
-			2,
+			Description:     "Meu nome eh Lucas Montano do canal https://youtube.com/LucasMontano e https://twitch.com/Lucas_Montano",
+			ExpectedQtLinks: 2,
 		},
 		{
-			"Meu nome eh Lucas Montano do canal https://instagram.com/LucasMontano https://youtube.com/LucasMontano e https://twitch.com/Lucas_Montano",
-			3,
+			Description:     "Meu nome eh Lucas Montano do canal https://instagram.com/LucasMontano https://youtube.com/LucasMontano e https://twitch.com/Lucas_Montano",
+			ExpectedQtLinks: 3,
 		},
 		{
-			"Meu nome eh Lucas Montano do canal Lucas Montano",
-			0,
+			Description:     "Meu nome eh Lucas Montano do canal Lucas Montano",
+			ExpectedQtLinks: 0,
 		},
 	}
 
 	for _, table := range tables {
-		expected := table.expectedQtLinks
-		got := ExtractVideoLinks(table.description)
+		expected := table.ExpectedQtLinks
+		got := ExtractVideoLinks(table.Description)
 		if expected != len(got) {
 			t.Errorf("Wrong qt. of links extract, got: %d, want: %d.", len(got), expected)
 		}
