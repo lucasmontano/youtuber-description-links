@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-func TestExtractVideoLinksQt(t *testing.T) {
+func TestExtractLinksQt(t *testing.T) {
 
 	tables := []struct {
 		description     string
@@ -28,7 +28,7 @@ func TestExtractVideoLinksQt(t *testing.T) {
 
 	for _, table := range tables {
 		expected := table.expectedQtLinks
-		got := ExtractVideoLinks(table.description)
+		got := ExtractLinksUseCase(table.description)
 		if expected != len(got) {
 			t.Errorf("Wrong qt. of links extract, got: %d, want: %d.", len(got), expected)
 		}
