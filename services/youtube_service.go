@@ -13,7 +13,7 @@ import (
 func GetVideosService(playlistID string) models.PlaylistItemsResponse {
 
 	// Open our jsonFile
-	jsonFile, err := os.Open("playlist-" + playlistID + ".json")
+	jsonFile, err := os.Open("../playlists/playlist-" + playlistID + ".json")
 	// if we os.Open returns an error then handle it
 	if err != nil {
 		fmt.Println(err)

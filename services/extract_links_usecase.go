@@ -7,7 +7,7 @@ func ExtractLinksUseCase(videos []models.VideoDomainModel) []models.LinkDomainMo
 	linkMap := make(map[string][]string)
 
 	for _, video := range videos {
-		links := descriptionToLinksMapper(video.Description)
+		links := DescriptionToLinksMapper(video.Description)
 		for _, link := range links {
 			linkMap[link] = append(linkMap[link], video.ID)
 		}

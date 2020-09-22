@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	"lucasmontano.com/yt-links/models"
+	"lucasmontano.com/yt-links/services"
 )
 
 func TestYoutubeServiceSerialization(t *testing.T) {
@@ -32,7 +33,7 @@ func TestYoutubeServiceSerialization(t *testing.T) {
 
 	for _, table := range tables {
 		expected := table.expected
-		got := getVideosService(table.playlistID)
+		got := services.GetVideosService(table.playlistID)
 
 		if expected.Items[0].Snippet.Description != got.Items[0].Snippet.Description {
 			t.Errorf("Description doenst match!")

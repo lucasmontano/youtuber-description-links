@@ -1,6 +1,10 @@
 package tests
 
-import "testing"
+import (
+	"testing"
+
+	"lucasmontano.com/yt-links/services"
+)
 
 func TestExtractLinksQt(t *testing.T) {
 
@@ -28,7 +32,7 @@ func TestExtractLinksQt(t *testing.T) {
 
 	for _, table := range tables {
 		expected := table.expectedQtLinks
-		got := DescriptionToLinksMapper(table.description)
+		got := services.DescriptionToLinksMapper(table.description)
 		if expected != len(got) {
 			t.Errorf("Wrong qt. of links extract, got: %d, want: %d.", len(got), expected)
 		}
