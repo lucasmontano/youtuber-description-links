@@ -1,8 +1,9 @@
-package main
+package services
 
 import "lucasmontano.com/yt-links/models"
 
-func extractLinksUseCase(videos []models.VideoDomainModel) []models.LinkDomainModel {
+//ExtractLinksUseCase : add description
+func ExtractLinksUseCase(videos []models.VideoDomainModel) []models.LinkDomainModel {
 	linkMap := make(map[string][]string)
 
 	for _, video := range videos {

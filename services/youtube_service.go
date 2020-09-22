@@ -1,4 +1,4 @@
-package main
+package services
 
 import (
 	"encoding/json"
@@ -9,7 +9,8 @@ import (
 	"lucasmontano.com/yt-links/models"
 )
 
-func getVideosService(playlistID string) models.PlaylistItemsResponse {
+//GetVideosService : add description
+func GetVideosService(playlistID string) models.PlaylistItemsResponse {
 
 	// Open our jsonFile
 	jsonFile, err := os.Open("playlist-" + playlistID + ".json")

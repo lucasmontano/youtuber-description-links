@@ -1,6 +1,9 @@
 package main
 
-import "lucasmontano.com/yt-links/models"
+import (
+	"lucasmontano.com/yt-links/models"
+	"lucasmontano.com/yt-links/services"
+)
 
 /**
  * args[1]: playlistId
@@ -19,5 +22,5 @@ func mainController(args []string) {
 		}
 		videoDomainItems = append(videoDomainItems, videoDomainModel)
 	}
-	extractLinksUseCase(videoDomainItems)
+	services.ExtractLinksUseCase(videoDomainItems)
 }
