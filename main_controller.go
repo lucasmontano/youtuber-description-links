@@ -1,20 +1,23 @@
 package main
 
+import "lucasmontano.com/yt-links/models"
+
 /**
  * args[1]: playlistId
  */
-func MainController(args []string) {
-	playlistItemsResponse := GetVideosService(args[1])
+
+func mainController(args []string) {
+	playlistItemsResponse := getVideosService(args[1])
 	videoSnippetItems := playlistItemsResponse.Items
-	var videoDomainItems []VideoDomainModel
+	var videoDomainItems []models.VideoDomainModel
 	for _, videoSnippet := range videoSnippetItems {
-		videoId := videoSnippet.Snippet.ResourceId.VideoId
+		videoID := videoSnippet.Snippet.ResourceID.VideoID
 		description := videoSnippet.Snippet.Description
-		videoDomainModel := VideoDomainModel{
-			Id:          videoId,
+		videoDomainModel := models.VideoDomainModel{
+			ID:          videoID,
 			Description: description,
 		}
 		videoDomainItems = append(videoDomainItems, videoDomainModel)
 	}
-	ExtractLinksUseCase(videoDomainItems)
+	extractLinksUseCase(videoDomainItems)
 }

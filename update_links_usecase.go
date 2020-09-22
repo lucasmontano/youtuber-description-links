@@ -1,5 +1,7 @@
 package main
 
-func UpdateLink(link LinkDomainModel) {
+import "lucasmontano.com/yt-links/models"
+
+func updateLink(link models.LinkDomainModel) {
 
 }

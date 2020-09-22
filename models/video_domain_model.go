@@ -1,6 +1,7 @@
 package models
 
+//VideoDomainModel : add description
 type VideoDomainModel struct {
-	Id          string
+	ID          string
 	Description string
 }

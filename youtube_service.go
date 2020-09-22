@@ -5,9 +5,11 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+
+	"lucasmontano.com/yt-links/models"
 )
 
-func GetVideosService(playlistID string) PlaylistItemsResponse {
+func getVideosService(playlistID string) models.PlaylistItemsResponse {
 
 	// Open our jsonFile
 	jsonFile, err := os.Open("playlist-" + playlistID + ".json")
@@ -21,7 +23,7 @@ func GetVideosService(playlistID string) PlaylistItemsResponse {
 
 	byteValue, _ := ioutil.ReadAll(jsonFile)
 
-	var playlistItemsResponse PlaylistItemsResponse
+	var playlistItemsResponse models.PlaylistItemsResponse
 	errGJson := json.Unmarshal(byteValue, &playlistItemsResponse)
 	if errGJson != nil {
 		fmt.Println(err)

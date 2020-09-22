@@ -1,21 +1,23 @@
 package main
 
-func ExtractLinksUseCase(videos []VideoDomainModel) []LinkDomainModel {
+import "lucasmontano.com/yt-links/models"
+
+func extractLinksUseCase(videos []models.VideoDomainModel) []models.LinkDomainModel {
 	linkMap := make(map[string][]string)
 
 	for _, video := range videos {
-		links := DescriptionToLinksMapper(video.Description)
+		links := descriptionToLinksMapper(video.Description)
 		for _, link := range links {
-			linkMap[link] = append(linkMap[link], video.Id)
+			linkMap[link] = append(linkMap[link], video.ID)
 		}
 	}
 
-	var links []LinkDomainModel
+	var links []models.LinkDomainModel
 
 	for url, videoItems := range linkMap {
-		links = append(links, LinkDomainModel{
-			url:    url,
-			videos: videoItems,
+		links = append(links, models.LinkDomainModel{
+			URL:    url,
+			Videos: videoItems,
 		})
 	}
 

@@ -1,6 +1,7 @@
 package models
 
+//LinkDomainModel : add description
 type LinkDomainModel struct {
-	url    string
-	videos []string
+	URL    string
+	Videos []string
 }
