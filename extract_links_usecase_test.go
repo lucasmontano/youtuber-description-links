@@ -1,36 +1,49 @@
 package main
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
-func TestExtractLinksQt(t *testing.T) {
-
+func TestExtractLinks(t *testing.T) {
 	tables := []struct {
-		description     string
-		expectedQtLinks int
+		videoItems      []VideoDomainModel
+		expectedLinks []LinkDomainModel
 	}{
 		{
-			"Meu nome eh Lucas Montano do canal https://youtube.com/LucasMontano",
-			1,
-		},
-		{
-			"Meu nome eh Lucas Montano do canal https://youtube.com/LucasMontano e https://twitch.com/Lucas_Montano",
-			2,
-		},
-		{
-			"Meu nome eh Lucas Montano do canal https://instagram.com/LucasMontano https://youtube.com/LucasMontano e https://twitch.com/Lucas_Montano",
-			3,
-		},
-		{
-			"Meu nome eh Lucas Montano do canal Lucas Montano",
-			0,
+			[]VideoDomainModel{
+				{
+					Id:          "Video_1",
+					Description: "Meu nome eh Lucas Montano do canal https://youtube.com/LucasMontano",
+				},
+				{
+					Id:          "Video_2",
+					Description: "Meu nome eh Lucas Montano do canal https://youtube.com/LucasMontano e Twitch https://twitch.com/Lucas_Montano",
+				},
+			},
+			[]LinkDomainModel{
+				{
+					url: "youtube.com/LucasMontano",
+					videos: []string{
+						"Video_1",
+						"Video_2",
+					},
+				},
+				{
+					url: "twitch.com/Lucas_Montano",
+					videos: []string{
+						"Video_2",
+					},
+				},
+			},
 		},
 	}
 
 	for _, table := range tables {
-		expected := table.expectedQtLinks
-		got := ExtractLinksUseCase(table.description)
-		if expected != len(got) {
-			t.Errorf("Wrong qt. of links extract, got: %d, want: %d.", len(got), expected)
+		expected := table.expectedLinks
+		got := ExtractLinksUseCase(table.videoItems)
+		if !reflect.DeepEqual(expected, got) {
+			t.Error("Wrong mapping of links extract")
 		}
 	}
 }

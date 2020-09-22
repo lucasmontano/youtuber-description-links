@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	MainController(os.Args[1])
+	MainController(os.Args)
 }

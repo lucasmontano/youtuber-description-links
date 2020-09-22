@@ -16,7 +16,12 @@ type PlaylistItem struct {
 }
 
 type VideoSnippet struct {
+	ResourceId ResourceId `json:"resourceId"`
 	Description string `json:"description"`
+}
+
+type ResourceId struct {
+	VideoId string `json:"videoId"`
 }
 
 func GetVideosService(playlistID string) PlaylistItemsResponse {
