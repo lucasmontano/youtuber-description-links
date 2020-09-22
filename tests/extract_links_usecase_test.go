@@ -1,4 +1,4 @@
-package main
+package tests
 
 import (
 	"reflect"
@@ -7,7 +7,7 @@ import (
 
 func TestExtractLinks(t *testing.T) {
 	tables := []struct {
-		videoItems      []VideoDomainModel
+		videoItems    []VideoDomainModel
 		expectedLinks []LinkDomainModel
 	}{
 		{

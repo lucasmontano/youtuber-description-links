@@ -1,4 +1,4 @@
-package main
+package models
 
 type VideoDomainModel struct {
 	Id          string
