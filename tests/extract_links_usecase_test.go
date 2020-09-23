@@ -1,37 +1,40 @@
-package main
+package tests
 
 import (
 	"reflect"
 	"testing"
+
+	"lucasmontano.com/yt-links/models"
+	"lucasmontano.com/yt-links/services"
 )
 
 func TestExtractLinks(t *testing.T) {
 	tables := []struct {
-		videoItems      []VideoDomainModel
-		expectedLinks []LinkDomainModel
+		videoItems    []models.VideoDomainModel
+		expectedLinks []models.LinkDomainModel
 	}{
 		{
-			[]VideoDomainModel{
+			[]models.VideoDomainModel{
 				{
-					Id:          "Video_1",
+					ID:          "Video_1",
 					Description: "Meu nome eh Lucas Montano do canal https://youtube.com/LucasMontano",
 				},
 				{
-					Id:          "Video_2",
+					ID:          "Video_2",
 					Description: "Meu nome eh Lucas Montano do canal https://youtube.com/LucasMontano e Twitch https://twitch.com/Lucas_Montano",
 				},
 			},
-			[]LinkDomainModel{
+			[]models.LinkDomainModel{
 				{
-					url: "youtube.com/LucasMontano",
-					videos: []string{
+					URL: "youtube.com/LucasMontano",
+					Videos: []string{
 						"Video_1",
 						"Video_2",
 					},
 				},
 				{
-					url: "twitch.com/Lucas_Montano",
-					videos: []string{
+					URL: "twitch.com/Lucas_Montano",
+					Videos: []string{
 						"Video_2",
 					},
 				},
@@ -41,7 +44,7 @@ func TestExtractLinks(t *testing.T) {
 
 	for _, table := range tables {
 		expected := table.expectedLinks
-		got := ExtractLinksUseCase(table.videoItems)
+		got := services.ExtractLinksUseCase(table.videoItems)
 		if !reflect.DeepEqual(expected, got) {
 			t.Error("Wrong mapping of links extract")
 		}
