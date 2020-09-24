@@ -20,13 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="365e49c3-2dea-42e4-9f82-9e351740c8a8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_controller.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/youtube_service_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/youtube_service_model.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/youtube_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/youtube_service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/youtube_service_test.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

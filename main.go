@@ -21,6 +21,6 @@ func main() {
 	}
 	links := services.ExtractLinksUseCase(videoDomainItems)
 	for _, link := range links {
-		fmt.Printf("URL: %v, in (%v) videos\r\n", link.URL, len(link.Videos))
+		fmt.Printf("URL: %v, found in (%v) videos\r\n", link.URL, len(link.Videos))
 	}
 }
