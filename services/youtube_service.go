@@ -123,11 +123,11 @@ func GetVideosService() models.PlaylistItemsResponse {
 	}
 
 	for _, channel := range response.Items {
+		var nextPageToken string
 		playlistID := channel.ContentDetails.RelatedPlaylists.Uploads
 		// Print the playlist ID for the list of uploaded videos.
 		fmt.Printf("Videos in list %s\r\n", playlistID)
 
-		nextPageToken := ""
 		for {
 			// Call the playlistItems.list method to retrieve the
 			// list of uploaded videos. Each request retrieves 50
