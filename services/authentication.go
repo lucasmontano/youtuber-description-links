@@ -20,7 +20,7 @@ func buildOAuthHTTPClient() *http.Client {
 
 	// If modifying these scopes, delete your previously saved credentials
 	// at ~/.credentials/youtube-go-quickstart.json
-	config, err := google.ConfigFromJSON(b, youtube.YoutubeReadonlyScope)
+	config, err := google.ConfigFromJSON(b, youtube.YoutubepartnerScope)
 	if err != nil {
 		log.Fatalf("Unable to parse client secret file to config: %v", err)
 	}

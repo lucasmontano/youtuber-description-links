@@ -19,11 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365e49c3-2dea-42e4-9f82-9e351740c8a8" name="Default Changelist" comment="" />
+    <list default="true" id="365e49c3-2dea-42e4-9f82-9e351740c8a8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/services/youtube_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/youtube_service.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
@@ -40,6 +49,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
@@ -83,21 +93,64 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1016" height="230" key="GridCell.Tab.0.bottom" timestamp="1600879997334">
+    <state x="299" y="173" key="#xdebugger.evaluate" timestamp="1601395281547">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1016" height="230" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1600879997334" />
-    <state width="1016" height="230" key="GridCell.Tab.0.center" timestamp="1600879997333">
+    <state x="299" y="173" key="#xdebugger.evaluate/0.23.1440.877@0.23.1440.877" timestamp="1601395281547" />
+    <state width="1031" height="284" key="GridCell.Tab.0.bottom" timestamp="1601395435659">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1016" height="230" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1600879997333" />
-    <state width="1016" height="230" key="GridCell.Tab.0.left" timestamp="1600879997333">
+    <state width="1031" height="284" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1601395435659" />
+    <state width="1031" height="284" key="GridCell.Tab.0.center" timestamp="1601395435650">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1016" height="230" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1600879997333" />
-    <state width="1016" height="230" key="GridCell.Tab.0.right" timestamp="1600879997333">
+    <state width="1031" height="284" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1601395435650" />
+    <state width="1031" height="284" key="GridCell.Tab.0.left" timestamp="1601395435631">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1016" height="230" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1600879997333" />
+    <state width="1031" height="284" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1601395435631" />
+    <state width="1031" height="284" key="GridCell.Tab.0.right" timestamp="1601395435658">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1031" height="284" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1601395435658" />
+    <state width="1031" height="284" key="GridCell.Tab.1.bottom" timestamp="1601395466934">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1031" height="284" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1601395466934" />
+    <state width="1031" height="284" key="GridCell.Tab.1.center" timestamp="1601395466930">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1031" height="284" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1601395466930" />
+    <state width="1031" height="284" key="GridCell.Tab.1.left" timestamp="1601395466929">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1031" height="284" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1601395466929" />
+    <state width="1031" height="284" key="GridCell.Tab.1.right" timestamp="1601395466933">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1031" height="284" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1601395466933" />
+    <state width="536" height="437" key="XDebugger.FullValuePopup" timestamp="1601395526472">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="536" height="437" key="XDebugger.FullValuePopup/0.23.1440.877@0.23.1440.877" timestamp="1601395526472" />
+    <state x="377" y="236" key="refactoring.ChangeSignatureDialog" timestamp="1601309791571">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="377" y="236" key="refactoring.ChangeSignatureDialog/0.23.1440.877@0.23.1440.877" timestamp="1601309791571" />
+    <state x="199" y="215" width="670" height="676" key="search.everywhere.popup" timestamp="1601394941956">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="199" y="215" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1601394941956" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/services/youtube_service.go</url>
+          <line>170</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
