@@ -9,6 +9,7 @@ import (
 	"os"
 	"os/user"
 	"path/filepath"
+	"strings"
 
 	"lucasmontano.com/yt-links/models"
 
@@ -162,4 +163,28 @@ func GetVideosService() models.PlaylistItemsResponse {
 	}
 
 	return models.PlaylistItemsResponse{Items: videoItems}
+}
+
+func UpdateVideo(link models.LinkDomainModel, newURL string) {
+	service, err := youtube.New(buildOAuthHTTPClient())
+
+	handleError(err, "Error creating YouTube client")
+
+	call := service.Videos.List([]string{"snippet"}).Id(link.Videos[0])
+	response, err := call.Do()
+	if response == nil {
+		fmt.Printf("Video not found: " + link.Videos[0])
+		return
+	}
+	for _, video := range response.Items {
+		originalDescription := video.Snippet.Description
+		updatedDescription := strings.Replace(originalDescription, link.URL, newURL, -1)
+		video.Snippet.Description = updatedDescription
+		updateCall := service.Videos.Update([]string{"snippet"}, video)
+		updateResponse, updateErr := updateCall.Do()
+		handleError(updateErr, "Error updating YouTube video")
+		if updateErr != nil {
+			fmt.Printf("New Description: " + updateResponse.Snippet.Description)
+		}
+	}
 }
