@@ -170,15 +170,21 @@ func UpdateVideo(link models.LinkDomainModel, newURL string) {
 
 	handleError(err, "Error creating YouTube client")
 
-	call := service.Videos.List([]string{"snippet"}).Id(link.Videos[0])
+	for _, videoID := range link.Videos {
+		updateVideo(videoID, link.URL, newURL, service, err)
+	}
+}
+
+func updateVideo(videoID string, oldURL, newURL string, service *youtube.Service, err error) {
+	call := service.Videos.List([]string{"snippet"}).Id(videoID)
 	response, err := call.Do()
 	if response == nil {
-		fmt.Printf("Video not found: " + link.Videos[0])
+		fmt.Printf("Video not found: " + videoID)
 		return
 	}
 	for _, video := range response.Items {
 		originalDescription := video.Snippet.Description
-		updatedDescription := strings.Replace(originalDescription, link.URL, newURL, -1)
+		updatedDescription := strings.Replace(originalDescription, oldURL, newURL, -1)
 		video.Snippet.Description = updatedDescription
 		updateCall := service.Videos.Update([]string{"snippet"}, video)
 		updateResponse, updateErr := updateCall.Do()
