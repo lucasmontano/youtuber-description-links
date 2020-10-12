@@ -1,7 +1,7 @@
 # youtuber-description-links
 A tool to help Youtubers to manage theirs video links.
 
-This project started on the 4th edition of #umaStackQueNaodomino which we learned how to use [Youtube Data API] with Go. You can check clips and vods at [Twitch.tv](https://www.twitch.tv/lucas_montano)
+This project started on the 4th edition of #umaStackQueNaodomino which we learned how to use [Youtube Data API](https://developers.google.com/youtube/v3) with Go. You can check clips and vods at [Twitch.tv](https://www.twitch.tv/lucas_montano)
 
 Previous Editions's Programming Languages
 - [Typescript / Javascript with NodeJS (First Edition)](https://github.com/lucasmontano/twitch)
